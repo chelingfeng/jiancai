@@ -1,0 +1,8 @@
+.DS_Store
+/Public/Uploads
+/db_back
+/Runtime
+/web
+/Application/Common/Conf/config_db.php
+composer.lock
+/vendor
