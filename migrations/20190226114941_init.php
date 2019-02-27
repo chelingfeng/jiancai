@@ -33,6 +33,25 @@ class Init extends Migration
                 PRIMARY KEY (`adminid`)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员表';
 
+            CREATE TABLE `a_order` (
+                `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+                `admin_id` int(11) DEFAULT NULL COMMENT '管理员id',
+                `village` varchar(100) DEFAULT NULL COMMENT '小区',
+                `name` varchar(100) DEFAULT NULL COMMENT '姓名',
+                `phone` varchar(20) DEFAULT NULL COMMENT '手机号',
+                `address` varchar(100) DEFAULT NULL COMMENT '地址',
+                `amount` varchar(20) DEFAULT NULL COMMENT '订金',
+                `date` varchar(20) DEFAULT NULL COMMENT '测量日期',
+                `content` text COMMENT '测量内容',
+                `scqg` int(11) DEFAULT NULL COMMENT '石材切割',
+                `dcmb` int(11) DEFAULT NULL COMMENT '单层磨边',
+                `scmb` int(11) DEFAULT NULL COMMENT '双层磨边',
+                `gjjg` int(11) DEFAULT NULL COMMENT '钢筋加固',
+                `create_time` datetime DEFAULT NULL,
+                `update_time` datetime DEFAULT NULL,
+                PRIMARY KEY (`id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
             INSERT INTO `a_admin` (`adminid`, `username`, `password`, `name`, `code`, `del`, `remark`, `role`, `create_time`, `update_time`) VALUES (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '管理员', NULL, 0, '', 0, '2018-12-01 00:00:00', '2018-12-01 00:00:00');
         ");
     }

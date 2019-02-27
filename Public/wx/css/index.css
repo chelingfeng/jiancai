@@ -310,9 +310,11 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="tex
 	border: 0px;
 	font-size: 0.9rem;
 	height: 2.5rem;
+	line-height: 2.5rem;
 	color: #fff;
 	margin-left: 1rem;
 }
 .search-input input::-webkit-input-placeholder{
 	color:#fff;
+	line-height: 2.5rem;
 }
