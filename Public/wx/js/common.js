@@ -1,12 +1,3 @@
-function pay(orderId = '', callback = '') {
-    if (orderId) {
-        if (callback == '') {
-            callback = location.href;
-        }
-        wx.miniProgram.navigateTo({ url: '/pages/pay/pay?orderId=' + orderId + '&callback=' + encodeURIComponent(callback) })
-    }
-}
-
 var $_GET = (function () {
     var url = window.document.location.href.toString();
     var u = url.split("?");

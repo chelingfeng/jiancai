@@ -7,8 +7,7 @@ $(function () {
     	});
     });
 
-    //会员首页
-    $(document).on("pageInit", "#page-vip-index", function (e, id, page) {
+    $(document).on("pageInit", "#page-index", function (e, id, page) {
         
     });
 
