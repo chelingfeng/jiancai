@@ -3,32 +3,27 @@
     <div class="page-group">
         <div class="page page-current" style="background: #fff" id="page-today">
         	<div class="content native-scroll">
+				<?php foreach($data as $d) { ?>
         		<div class="order-list">
         			<div class="left">
-        				<p class="time">08:30</p>
-        				<p class="village">小区名称</p>
+        				<p class="time"><?=date('H:i', strtotime($d['date']))?></p>
+        				<p class="village">{$d.village}</p>
         			</div>
         			<div class="right">
-        				<p class="name">姓名：<span>车凌锋</span></p>
-        				<p class="phone">电话：<span>13486543696</span></p>
-        				<p class="address">地址：<span>浙江省杭州市xxxxxxx</span></p>
-        				<a class="detail">点击详情</a>
+        				<p class="name">姓名：<span>{$d.name}</span></p>
+        				<p class="phone">电话：<span>{$d.phone}</span></p>
+        				<p class="address">地址：<span>{$d.address}</span></p>
+        				<a class="detail" data-no-cache="true" href="{:U('detail', array('id' => $d['id']))}">点击详情</a>
         			</div>
         			<div class="both"></div>
-        		</div>
-        		<div class="order-list">
-        			<div class="left">
-        				<p class="time">08:30</p>
-        				<p class="village">小区名称</p>
-        			</div>
-        			<div class="right">
-        				<p class="name">姓名：<span>车凌锋</span></p>
-        				<p class="phone">电话：<span>13486543696</span></p>
-        				<p class="address">地址：<span>浙江省杭州市xxxxxxx</span></p>
-        				<a class="detail">点击详情</a>
-        			</div>
-        			<div class="both"></div>
-        		</div>
+				</div>
+				<?php } ?>
+				<?php if(!$data) {?>
+				<div class="empty" style="display: block;">
+					<span class="iconfont icon-ico_meiyoushuju"></span>
+					<p>暂无订单</p>
+				</div>
+				<?php } ?>
         	</div>
         </div>
     </div>

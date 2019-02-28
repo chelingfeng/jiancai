@@ -52,7 +52,7 @@ class Init extends Migration
                 PRIMARY KEY (`id`)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-            INSERT INTO `a_admin` (`adminid`, `username`, `password`, `name`, `code`, `del`, `remark`, `role`, `create_time`, `update_time`) VALUES (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '管理员', NULL, 0, '', 0, '2018-12-01 00:00:00', '2018-12-01 00:00:00');
+            INSERT INTO `a_admin` (`adminid`, `username`, `password`, `name`, `code`, `del`, `remark`, `role`, `create_time`, `update_time`) VALUES (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '管理员', '001', 0, '', 0, '2018-12-01 00:00:00', '2018-12-01 00:00:00');
         ");
     }
 

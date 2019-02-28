@@ -227,7 +227,7 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="tex
 	color:#c2c2c2;
 	font-size: 0.8rem;
 }
-.order-detail-field-content textarea {
+.order-detail-field-content textarea, .order-detail-field-content .textarea {
 	background: #f9f9f9;
 	width: 100%;
 	border: 0;
@@ -238,6 +238,7 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="tex
 	width: 88%;
 	margin-left: 7%;
 	color: #49bfb3;
+	position: relative;
 }
 .order-detail-bottom p {
 	line-height: 1.8rem;
@@ -317,4 +318,23 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="tex
 .search-input input::-webkit-input-placeholder{
 	color:#fff;
 	line-height: 2.5rem;
+}
+.gongzhang {
+	border: 0;
+    position: absolute;
+    width: 37%;
+    right: 0;
+    bottom: 2.3rem;
+}
+.change-account {
+	display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 2.2rem;
+    text-align: center;
+    background: #80d7cf;
+    width: 80%;
+    margin-left: 10%;
+    color: #fff;
+    border-radius: 0.5rem;
 }

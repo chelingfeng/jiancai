@@ -4,12 +4,13 @@
         <div class="page page-current" style="background: #fff" id="page-index">
             <div class="content native-scroll">
                 <div class="avatar" >
-                    <img src="https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoohsg50vH92YNib7knlicwiaiaLw0r4LbOwGmcDFcUSZI8aIT9TJHZ2BiaIlKxbw5IFjhshWUYicUIIJdw/132" />
+                    <img src="{$user.avatar}" />
                 </div>
-                <p class="name">工号3333</p>
+                <p class="name">工号<?=session('admin.code')?></p>
                 <a class="menu" href="{:U('order')}" data-no-cache="true">客户下单</a>
                 <a class="menu" href="{:U('today')}" data-no-cache="true">今日测量</a>
                 <a class="menu" href="{:U('search')}" data-no-cache="true">查询订单</a>
+                <a class="menu" href="{:U('Home/Login/index')}" data-no-cache="true" style="margin-bottom:1rem;">切换账号</a>
             </div>
         </div>
     </div>

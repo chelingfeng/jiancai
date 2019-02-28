@@ -1,0 +1,41 @@
+<extend name="Common/__base" />
+<block name="body">
+    <div class="page-group">
+        <div class="page page-current" style="background: #fff" id="page-detail">
+            <div class="content native-scroll">
+                <div class="order-detail">
+                    <div class="order-detail-btn" id="print">打印</div>
+                    <img src="__PUBLIC__/wx/img/order_bg.jpg" class="bg" />
+                    <p class="order-detail-title">腾达石业</p>
+                    <div class="order-detail-field-content">
+                        <p class="field-title">姓名</p>
+                        <div class="field-input">{$data.name}</div>
+                        <p class="field-title">电话</p>
+                        <div class="field-input">{$data.phone}</div>
+                        <p class="field-title">小区</p>
+                        <div class="field-input">{$data.village}</div>
+                        <p class="field-title">地址</p>
+                        <div class="field-input">{$data.address}</div>
+                        <p class="field-title">定金</p>
+                        <div class="field-input">{$data.amount}</div>
+                        <p class="field-title">测量日期</p>
+                        <div class="field-input">{$data.date}</div>
+                    </div>
+                    <div class="order-detail-field-content">
+                        <p class="field-title">测量内容</p>
+                        <div class="textarea">{$data.content}</div>
+                    </div>
+                    <div class="order-detail-bottom">
+                        <p>石材切割 {$data.scqg}元/平方</p>
+                        <p>单层磨边 {$data.dcmb}元/米</p>
+                        <p>双层磨边 {$data.scmb}元/米</p>
+                        <p>钢筋加固 {$data.gjjg}元/米</p>
+                        <p class="notice">注：石材均有损耗，常规约15%损耗</p>
+                        <img src="{$system.gongzhang}" class="gongzhang" />
+                    </div>
+                    <div class="order-detail-submit" id="submit">提交</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

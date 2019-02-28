@@ -45,18 +45,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="" width="150">支付商户号</td>
-                                    <td>
-                                        <input name="mch_id" type="text" style="width: 300px" value="{:setting('system')['mch_id']}" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="" width="150">支付密钥</td>
-                                    <td>
-                                        <input name="api_key" type="text" style="width: 300px" value="{:setting('system')['api_key']}" />
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td class="" width="150">石材切割</td>
                                     <td>
                                         <input name="scqg" type="number" style="width: 80px" value="{:setting('system')['scqg']}" /> 元/平方
@@ -78,6 +66,16 @@
                                     <td class="" width="150">钢筋加固</td>
                                     <td>
                                         <input name="gjjg" type="number" style="width: 80px" value="{:setting('system')['gjjg']}" /> 元/米
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="" width="150">公章</td>
+                                    <td>
+                                        <img src="{:setting('system')['gongzhang']}" class="background" style="width: 150px;height: 150px;" />
+                                        <input name="gongzhang" type="hidden" class="background_hidden"
+                                            value="{:setting('system')['gongzhang']}" />
+                                        <a class="btn btn-default upload_action">点击上传</a>
+                                        <br />建议大小：300px * 300px
                                     </td>
                                 </tr>
                                 <tr>
