@@ -25,11 +25,12 @@ class Init extends Migration
                 `password` varchar(32) NOT NULL DEFAULT '' COMMENT '密码',
                 `name` varchar(40) NOT NULL DEFAULT '' COMMENT '姓名',
                 `code` varchar(20) DEFAULT NULL COMMENT '编号',
-                `del` tinyint(1) DEFAULT '0',
-                `remark` varchar(255) DEFAULT NULL,
-                `role` tinyint(1) DEFAULT '1',
+                `remark` varchar(255) DEFAULT NULL COMMENT '备注',
+                `role` tinyint(1) DEFAULT '1' COMMENT '权限',
+                `openid` varchar(255) DEFAULT NULL COMMENT 'openid',
                 `create_time` datetime DEFAULT NULL,
                 `update_time` datetime DEFAULT NULL,
+                `del` tinyint(1) DEFAULT '0' COMMENT '1表示删除',
                 PRIMARY KEY (`adminid`)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员表';
 
@@ -51,6 +52,16 @@ class Init extends Migration
                 `update_time` datetime DEFAULT NULL,
                 PRIMARY KEY (`id`)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+            CREATE TABLE `a_user` (
+                `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+                `openid` varchar(255) DEFAULT '',
+                `nickname` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT '' COMMENT '昵称',
+                `avatar` varchar(255) DEFAULT '' COMMENT '头像',
+                `update_time` datetime DEFAULT NULL,
+                `create_time` datetime DEFAULT NULL,
+                PRIMARY KEY (`id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
 
             INSERT INTO `a_admin` (`adminid`, `username`, `password`, `name`, `code`, `del`, `remark`, `role`, `create_time`, `update_time`) VALUES (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '管理员', '001', 0, '', 0, '2018-12-01 00:00:00', '2018-12-01 00:00:00');
         ");
