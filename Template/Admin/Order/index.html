@@ -17,6 +17,7 @@
         <form method="post" action="" id="formsubmit">
             <div class="tool-bar ng-scope" style="background:#fff;border-bottom:1px solid #dfe0e0">
                 <div class="bar-full">
+                    <div class="btn btn-addon btn-info ng-scope" id="export"><i class="glyphicon glyphicon-plus"></i>导出</div>
                 </div>
                 测量日期：
                 <div><input type="text" class="datetime form-control" name="start_date" value="{$Think.post.start_date}"/></div>
@@ -138,6 +139,11 @@
             todayBtn: true,
             minView: 'month',
             pickerPosition: 'top-left'
+        });
+
+        $("#export").click(function(){
+            $('#formsubmit').attr('action', '{:U("export")}').submit();
+            $('#formsubmit').attr('action', '');
         });
 
         //点击页码
