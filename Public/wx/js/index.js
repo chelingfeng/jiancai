@@ -80,7 +80,7 @@ $(function () {
     });
 
     $(document).on("pageInit", "#page-order", function (e, id, page) {
-        // $("[name='date']").datetimePicker({});
+        $("[name='date']").datetimePicker({});
 
         $("#submit").click(function () {
             var data = {
