@@ -5,8 +5,7 @@ $(function () {
         $(".qidai").die("click").live('click', function () {
     		$.alert('该功能即将开放!', '提示');
         });
-        $('textarea, input').on('blur', function () {
-            // alert('3')
+        $('textarea, input, select').on('blur', function () {
             setTimeout(function () {
                 window.scrollTo(0, 0)
             }, 100)
