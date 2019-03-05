@@ -4,7 +4,13 @@ $(function () {
     $(document).on("pageInit", "", function(e, id, page) {
         $(".qidai").die("click").live('click', function () {
     		$.alert('该功能即将开放!', '提示');
-    	});
+        });
+        $('textarea, input').on('blur', function () {
+            // alert('3')
+            setTimeout(function () {
+                window.scrollTo(0, 0)
+            }, 100)
+        })
     });
 
     $(document).on("pageInit", "#page-login", function (e, id, page) {
