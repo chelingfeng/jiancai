@@ -71,9 +71,16 @@
 
                 html2canvas(cntElem, { width: width, height: height }).then(function (canvas) {
                     const src = canvas.toDataURL('image/jpeg');
-                    $("#show").attr('src', src).show();
-                    $("#print").hide();
-                    alert('长按保存图片')
+                     $.ajax({
+                        type: 'POST',
+                        data: { src: src },
+                        url: 'index.php?m=Home&c=Index&a=upload',
+                        success: function (res) {
+                            $("#show").attr('src', res.src).show();
+                            $("#print").hide();
+                            alert('长按保存图片')
+                        }
+                    });
                });
             }
         });
