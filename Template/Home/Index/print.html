@@ -71,10 +71,6 @@
 
                 html2canvas(cntElem, { width: width, height: height }).then(function (canvas) {
                     const src = canvas.toDataURL('image/jpeg');
-<<<<<<< HEAD
-                     $("#show").attr('src', src).show();
-=======
->>>>>>> 158628ddfcca7236f4e587a4dc9976d846629906
                      $.ajax({
                         type: 'POST',
                         data: { src: src },

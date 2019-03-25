@@ -77,21 +77,6 @@ class IndexController extends CommonController {
         $this->display();
     }
 
-    public function upload()
-    {
-        $src = $_POST['src'];
-        if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $src, $result)){
-            $type = $result[2];
-            $new_file = './Public/Uploads/';
-            $new_file = $new_file.time().".{$type}";
-            if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $src)))){
-                $this->ajaxReturn(['src' => $new_file]);
-            }else{
-                return false;
-            }
-        }
-    }
-
     public function searchOrder()
     {
         $keyword = $_POST['keyword'];
