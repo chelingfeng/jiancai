@@ -12,8 +12,10 @@ $(function () {
         })
 
         $("textarea").bind("input propertychange change", function (event) {
+            console.log(3333)
+            var offsetTop = $(this).offset().top;
             setTimeout(function () {
-                window.scrollTo(0, -1);
+                window.scrollTo(0, 111);
             }, 100)
         });
 
