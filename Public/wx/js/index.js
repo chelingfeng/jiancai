@@ -11,9 +11,9 @@ $(function () {
             }, 100)
         })
 
-        $(".content").scrollTop(100);
         $("textarea").bind("input propertychange change", function (event) {
-            $(".content").scrollTop($(".content").scrollTop() + 10);
+            $(".content").scrollTop($(".content").scrollTop() + 1);
+            $(".content").scrollTop($(".content").scrollTop() - 1);
         });
     });
 
