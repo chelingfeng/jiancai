@@ -6,9 +6,8 @@ $(function () {
     		$.alert('该功能即将开放!', '提示');
         });
         $('textarea, input, select').on('blur', function () {
-            setTimeout(function () {
-                window.scrollTo(0, 0)
-            }, 100)
+            $(".content").scrollTop($(".content").scrollTop() + 1);
+            $(".content").scrollTop($(".content").scrollTop() - 1);
         })
 
         $("textarea").bind("input propertychange change", function (event) {
