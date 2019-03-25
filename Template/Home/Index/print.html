@@ -100,9 +100,10 @@
                     $(".content").append(img);
 
                     $(img).css({
-                        "width": canvas.width / 2 + "px",
-                        "height": canvas.height / 2 + "px",
-                    }).addClass('f-full');
+                        "width": "100%",
+                        "z-index": "10000",
+                        "position": "absolute",
+                    });
 
                     $("#print").hide();
                 });
