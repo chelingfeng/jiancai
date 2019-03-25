@@ -5,16 +5,10 @@ $(function () {
         $(".qidai").die("click").live('click', function () {
     		$.alert('该功能即将开放!', '提示');
         });
-        $('textarea, input, select').on("blur",function(){
-            setTimeout(function(){
-                window.scrollTo(0,0);
-            },100)
-        }).on('focus',function(){
-            var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-            var offsetTop = $(this).offset().top - (clientHeight / 4);
-            setTimeout(function(){
-                window.scrollTo(0,offsetTop);
-            },100)
+        $('textarea, input, select').on('blur', function () {
+            setTimeout(function () {
+                window.scrollTo(0, 0)
+            }, 100)
         })
     });
 
