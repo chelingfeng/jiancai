@@ -9,6 +9,8 @@ $(function () {
             setTimeout(function () {
                 window.scrollTo(0, 0)
             }, 100)
+        }).on("focues", function(){
+            $(this).css('height', $(this)[0].scrollHeight);
         })
     });
 
