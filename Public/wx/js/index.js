@@ -10,8 +10,14 @@ $(function () {
                 window.scrollTo(0, 0)
             }, 100)
         }).on("focues", function(){
-            $(this).css('height', $(this)[0].scrollHeight);
+            
         })
+
+        $("textarea").bind("input propertychange change", function (event) {
+            $(this).css('height', $(this)[0].scrollHeight);
+        });
+
+
     });
 
     $(document).on("pageInit", "#page-login", function (e, id, page) {
