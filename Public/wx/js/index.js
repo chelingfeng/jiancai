@@ -11,12 +11,14 @@ $(function () {
             }, 100)
         })
 
-        var HEIGHT = $('body').height();
-        $(window).resize(function () {
-            $('.main').height(HEIGHT);
+        $("textarea").bind("input propertychange change", function (event) {
+            setTimeout(function () {
+                window.scrollTo(0, -1);
+            }, 100)
         });
 
         
+
     });
 
     $(document).on("pageInit", "#page-login", function (e, id, page) {
