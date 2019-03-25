@@ -10,11 +10,6 @@ $(function () {
                 window.scrollTo(0, 0)
             }, 100)
         })
-
-        var HEIGHT = $('body').height();
-        $(window).resize(function () {
-            $('body').height(HEIGHT);
-        });
     });
 
     $(document).on("pageInit", "#page-login", function (e, id, page) {
