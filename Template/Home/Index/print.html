@@ -68,6 +68,24 @@
            function convert2canvas() {
 
                 var cntElem = $('#print')[0];
+                var width = $('#print').width();
+                var height = $('#print').height();
+
+
+
+                html2canvas(cntElem, { width: width, height: height }).then(function (canvas) {
+                   const src = canvas.toDataURL('image/jpeg');
+                   const image = new Image();
+                   image.src = src;
+                   image.setAttribute('width', width);
+                   image.setAttribute('height', height);
+                   $(".content").append(image);
+                   $("#print").hide();
+               });
+
+               return ;
+
+
 
                 var shareContent = cntElem;//需要截图的包裹的（原生的）DOM 对象
                 var width = shareContent.offsetWidth; //获取dom 宽度
@@ -86,8 +104,10 @@
                     useCORS: true // 【重要】开启跨域配置
                 };
 
-                canvas.toDataURL();
-                
+                const src = canvas.toDataURL('image/jpeg');
+                $("#show").attr('src', src)
+                alert(src);
+                return;
                 html2canvas(shareContent, opts).then(function (canvas) {
 
                     var context = canvas.getContext('2d');
