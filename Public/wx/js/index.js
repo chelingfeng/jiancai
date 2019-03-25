@@ -10,6 +10,11 @@ $(function () {
                 window.scrollTo(0, 0)
             }, 100)
         })
+
+        $("textarea").bind("input propertychange change", function (event) {
+            window.scrollTo(0, 0)
+        });
+
     });
 
     $(document).on("pageInit", "#page-login", function (e, id, page) {
