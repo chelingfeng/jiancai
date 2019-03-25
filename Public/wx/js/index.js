@@ -17,6 +17,10 @@ $(function () {
         });
     });
 
+    $(document).on("pageInit", "#page-detail", function (e, id, page) {
+        
+    });
+
     $(document).on("pageInit", "#page-login", function (e, id, page) {
         $("#login").click(function(){
             var username = $("[name='username']").val();
