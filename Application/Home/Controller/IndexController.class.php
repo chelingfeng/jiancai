@@ -53,6 +53,13 @@ class IndexController extends CommonController {
         $this->display();
     }
 
+    public function print()
+    {
+        $data = M('order')->where(['id' => $_GET['id']])->find();
+        $this->assign('data', $data);
+        $this->display();
+    }
+
     public function searchOrder()
     {
         $keyword = $_POST['keyword'];

@@ -208,6 +208,10 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="tex
 		0px 1px 8px -1px rgba(81, 81,81,0.1), 
 		-4px -2px 8px -1px rgba(81, 81,81,0.1)
 }
+#print .order-detail-field-content {
+	border: 1px solid #ededed;
+	box-shadow:none;
+}
 .field-title {
 	color: #49bfb3;
 	margin: 0;
@@ -231,7 +235,7 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="tex
 	background: #f9f9f9;
 	width: 100%;
 	border: 0;
-	/* height: 7rem; */
+	height: 7rem;
 	padding: 0.5rem;
 }
 .order-detail-bottom {

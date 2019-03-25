@@ -17,6 +17,12 @@ $(function () {
         });
     });
 
+    $(document).on("pageInit", "#page-detail", function (e, id, page) {
+        $("#print").click(function(){
+            window.location.replace($(this).attr('data-url'));
+        });
+    });
+
     $(document).on("pageInit", "#page-login", function (e, id, page) {
         $("#login").click(function(){
             var username = $("[name='username']").val();
