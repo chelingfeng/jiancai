@@ -10,6 +10,11 @@ $(function () {
                 window.scrollTo(0, 0)
             }, 100)
         })
+
+        $(".content").scrollTop(100);
+        $("textarea").bind("input propertychange change", function (event) {
+            $(".content").scrollTop($(".content").scrollTop() + 10);
+        });
     });
 
     $(document).on("pageInit", "#page-login", function (e, id, page) {
