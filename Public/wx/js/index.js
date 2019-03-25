@@ -12,7 +12,8 @@ $(function () {
         })
 
         $("textarea").bind("input propertychange change", function (event) {
-            $(this).val($(this).val());
+            $(this).css('height', $(this).height());
+            $(this).focus();
         });
 
         
