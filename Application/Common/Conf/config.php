@@ -84,5 +84,5 @@ return array_merge($db, array(
     'mp_app_id' => 'wx54a2c04e693639c3',
     'mp_app_secret' => '1ffdc0f531d9148f53504958ff6720ce',
 
-    'version' => time(),
+    'version' => 'v1.0.0',
 ));
