@@ -23,7 +23,7 @@
     <div class="page-group">
         <div class="page page-current" style="background: #fff">
             <div class="content native-scroll">
-                <img src="" id="show" width="100%" style="none" />
+                <img src="" id="show" width="100%" style="display: none" />
                 <div class="order-detail" id="print">
                     <img src="__PUBLIC__/wx/img/order_bg.jpg" class="bg" />
                     <p class="order-detail-title">腾达石业</p>
@@ -64,16 +64,16 @@
     <script>
         $(function(){
            convert2canvas();
-           alert('长按保存图片')
            function convert2canvas() {
                 var cntElem = $('#print')[0];
                 var width = $('#print').width();
                 var height = $('#print').height();
 
                 html2canvas(cntElem, { width: width, height: height }).then(function (canvas) {
-                   const src = canvas.toDataURL('image/jpeg');
-                   $("#show").attr('src', src);
-                   $("#print").hide();
+                    const src = canvas.toDataURL('image/jpeg');
+                    $("#show").attr('src', src).show();
+                    $("#print").hide();
+                    alert('长按保存图片')
                });
             }
         });
